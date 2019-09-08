@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <section id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-dark">
+                    <div class="jumbotron mt-2">
+                        <h4 class="text-center">Register</h4>
+                        <form action="/api/register" method="POST">
+                            <div class="form-group">
+                                <label for="">Name</label>
+                                <input type="text" name="name" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Contact No.</label>
+                                <input type="tel" min="10" max="10" name="contactNo" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Email</label>
+                                <input type="email" name="email" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <label for="">Password</label>
+                                <input type="password" name="password" class="form-control" id="">
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="Register" class="btn btn-primary "> &nbsp;&nbsp;&nbsp;
+                                <i><a href="login.html">click here</a> to login</i>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
