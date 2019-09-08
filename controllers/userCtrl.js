@@ -1,4 +1,6 @@
-const userModel = require('../models/userModel')
+const userModel = require('../models/userModel'),
+      util = require('../utils/utilFile')
+
 
 module.exports = {
     registerUser : (req,res)=>{
@@ -7,11 +9,13 @@ module.exports = {
                 "message": "Invaild details"
             })
         } else {
+            var encPass = util.encryptPassword(req.body.password)            
+
             var userData = userModel({
                 name: req.body.name,
                 contactNo : req.body.contactNo,
                 email: req.body.email,
-                password: req.body.password
+                password: encPass
             })
 
             userData.save().then((err,data)=>{
