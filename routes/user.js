@@ -4,6 +4,6 @@ const express = require('express'),
       
       
 userRoute.post('/register',userCtrl.registerUser)
-userRoute.post('/register',userCtrl.loginUser)
+userRoute.post('/login',userCtrl.loginUser)
 
 module.exports = userRoute
