@@ -18,12 +18,11 @@ module.exports = {
                 password: encPass
             })
 
-            userData.save().then((err,data)=>{
-                if(err){
-                    res.send(err)
-                } else {
-                    res.send('<h1>Register Success <a href="login.html></a></h1>')
-                }
+            userData.save().then((data)=>{
+                res.send(data)
+                // res.send('<h1>Register Success <a href="login.html></a></h1>')
+            }).catch(err=>{
+                res.send(err.errmsg)
             })
         }
     },
