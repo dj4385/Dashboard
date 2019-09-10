@@ -26,19 +26,19 @@
                         <form action="/api/register" method="POST">
                             <div class="form-group">
                                 <label for="">Name</label>
-                                <input type="text" name="name" class="form-control" id="">
+                                <input type="text" name="name" class="form-control" id="" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Contact No.</label>
-                                <input type="tel" min="10" max="10" name="contactNo" class="form-control" id="">
+                                <input type="tel" minlength="10" maxlength="10" name="contactNo" class="form-control" id="" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Email</label>
-                                <input type="email" name="email" class="form-control" id="">
+                                <input type="email" name="email" class="form-control" id="" required>
                             </div>
                             <div class="form-group">
                                 <label for="">Password</label>
-                                <input type="password" name="password" class="form-control" id="">
+                                <input type="password" name="password" class="form-control" id="" required>
                             </div>
                             <div class="form-group">
                                 <input type="submit" value="Register" class="btn btn-primary "> &nbsp;&nbsp;&nbsp;
