@@ -1,7 +1,11 @@
 const userModel = require('../models/userModel'),
       util = require('../utils/utilFile'),
-      bcrypt = require('bcrypt')
+      bcrypt = require('bcrypt'),
+      path = require('path')
 
+var loginFilePath = path.join(path.normalize(__dirname+ '/../../../../../..'),'/login.html')
+
+console.log(loginFilePath)
 
 module.exports = {
     registerUser : (req,res)=>{
@@ -21,7 +25,7 @@ module.exports = {
 
             userData.save().then((data)=>{
                 // res.send(data)
-                res.send(`<h1>Register Success </h1> <a href="login.html>login</a>`)
+                res.send(`<h1>Register Success </h1> <a href="${loginFilePath}"><span>Login</span></a>`)
             }).catch(err=>{
                 res.send(err.errmsg)
             })
