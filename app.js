@@ -23,4 +23,4 @@ mongoose.connect(configFile.DbUrl, {useNewUrlParser: true, useCreateIndex: true}
     }
 )
 
-app.listen(4000,()=> console.log('Server started...'))
+app.listen(3000,()=> console.log('Server started...'))
