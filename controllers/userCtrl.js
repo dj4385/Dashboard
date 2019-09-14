@@ -3,9 +3,8 @@ const userModel = require('../models/userModel'),
       bcrypt = require('bcrypt'),
       path = require('path')
 
-var loginFilePath = path.join(path.normalize(__dirname+ '/../../../../../..'),'/login.html')
-
-console.log(loginFilePath)
+const loginFilePath = path.join(path.normalize(__dirname+ '/../../../../../..'),'/login.html')
+const dashboardFilePath = path.join(path.normalize(__dirname+"/.."),'/public/dashboard.html')
 
 module.exports = {
     registerUser : (req,res)=>{
@@ -50,10 +49,10 @@ module.exports = {
                         "message": "Invalid password"
                     })
                 } else {
-                    res.send({
-                        "message": "Login success"
-                    })
-                    // res.sendfile('')
+                    // res.send({
+                    //     "message": "Login success"
+                    // })
+                    res.sendFile(dashboardFilePath)
                 }
             }
         }
