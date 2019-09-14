@@ -52,7 +52,8 @@ module.exports = {
                     // res.send({
                     //     "message": "Login success"
                     // })
-                    res.sendFile(dashboardFilePath)
+                    // res.sendFile(dashboardFilePath)
+                    res.render('dashboard.ejs',{"username":user.name})
                 }
             }
         }
